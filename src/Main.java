@@ -21,8 +21,6 @@ public class Main {
         System.out.println("+, -, * ou /");
         operador = sc.next().charAt(0);
 
-        sc.close();
-
 
         switch (operador) {
             case '+':
@@ -51,7 +49,41 @@ public class Main {
         System.out.println("Resultado: " + resultado);
         System.out.println(" ");
         System.out.println("FIM");
+        System.out.println("--------------------------------------------------------");
 
+        System.out.println("Deseja calcular novamente? digite 't' pra tentar novamente ou q para parar");
+        String tente = sc.next();
 
+        if (tente.equals("t")) {
+            while (tente.equals("t")) {
+                System.out.println("Digite o primeiro número: ");
+                num1 = sc.nextDouble();
+                System.out.println("Digite o segundo número: ");
+                num2 = sc.nextDouble();
+                System.out.println("Digite o operador desejado");
+                System.out.println("+, -, * ou /");
+                operador = sc.next().charAt(0);
+
+                System.out.println("Primeiro número escolhido: " + num1);
+                System.out.println(" ");
+                System.out.println("Segundo número escolhido: " + num2);
+                System.out.println(" ");
+                System.out.println("Operador escolhido: " + operador);
+                System.out.println(" ");
+                System.out.println("Resultado: " + resultado);
+                System.out.println(" ");
+                System.out.println("FIM");
+
+                System.out.println("Deseja calcular novamente? digite 't' pra tentar novamente ou q para parar");
+                tente = sc.next();
+
+                if (tente.equals("q")) {
+                    System.out.println("FIM");
+                    break;
+                }
+            }
+        } else {
+            System.out.println("FIM");
+        }
     }
 }
